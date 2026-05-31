@@ -16,7 +16,7 @@ def home_view(request, *args, **kwargs):
 
 
 # def home_view(request, *args, **kwargs):
-#     qs = PageVisit.objects.all()
+#     qs = PageVisit.objects.all(),
 #     page_qs = PageVisit.objects.filter(path=request.path)
 #     context = {
 #         'page_visit_count': page_qs.count(),
@@ -26,7 +26,7 @@ def home_view(request, *args, **kwargs):
 #     path = request.path
 #     PageVisit.objects.create(path = request.path)
     
-#     return render(request, 'home.html', context)n
+#     return render(request, 'home.html', context)
 
 
 def about_view(request, *args, **kwargs):
