@@ -11,7 +11,25 @@ def old_home_page_view(request, *args, **kwargs):
     html_ = html_file_path.read_text()
     return HttpResponse(html_)
 
-def home_page_view(request):
+def home_view(request, *args, **kwargs):
+    return about_view(request, *args, **kwargs)
+
+
+# def home_view(request, *args, **kwargs):
+#     qs = PageVisit.objects.all()
+#     page_qs = PageVisit.objects.filter(path=request.path)
+#     context = {
+#         'page_visit_count': page_qs.count(),
+#         'total_visit_count': qs.count()
+#     }
+    
+#     path = request.path
+#     PageVisit.objects.create(path = request.path)
+    
+#     return render(request, 'home.html', context)
+
+
+def about_view(request, *args, **kwargs):
     qs = PageVisit.objects.all()
     page_qs = PageVisit.objects.filter(path=request.path)
     context = {
@@ -22,7 +40,5 @@ def home_page_view(request):
     path = request.path
     PageVisit.objects.create(path = request.path)
     
-    return render(request, 'home.html', context)
-
-
+    return render(request, 'about.html', context)
 
