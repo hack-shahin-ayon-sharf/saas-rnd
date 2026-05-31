@@ -1,0 +1,7 @@
+<div>
+    {% if request.user.is_authenticated %}
+        <p>Welcome back, User!</p>
+    {% else %}
+        <p>Welcome to our website! Please <a href="#">log in</a> to access your account.</p>
+    {% endif %}
+</div>
