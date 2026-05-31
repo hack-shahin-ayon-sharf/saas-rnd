@@ -9,9 +9,8 @@ https://docs.djangoproject.com/en/5.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
-import os
+
 from pathlib import Path
-from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,17 +20,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+SECRET_KEY = 'django-insecure-+hpi#fwp3%amk4p*byw%_646#x9(#!c8xri_!+#^(=e!5g!-_5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = os.environ.get("DEBUG") or False
-
-DEBUG = config("DJANGO_DEBUG", cast=bool)
-print("DEBUG", DEBUG, type(DEBUG))
+DEBUG = True
 
 ALLOWED_HOSTS = [
-    # '.railway.app' # https://saas.prod.railway.app
-    'saas-rnd-sample-gcb1.onrender.com',
+    '.railway.app' # https://saas.prod.railway.app
     
 ]
 

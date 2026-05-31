@@ -26,7 +26,7 @@ def home_view(request, *args, **kwargs):
 #     path = request.path
 #     PageVisit.objects.create(path = request.path)
     
-#     return render(request, 'home.html', context)
+#     return render(request, 'home.html', context)n
 
 
 def about_view(request, *args, **kwargs):
