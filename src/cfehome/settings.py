@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'cfehome.wsgi.application'
 
 CONN_MAX_AGE = config('CONN_MAX_AGE', cast=int, default=30)
 CONN_HEALTH_CHECKS = True #config('CONN_HEALTH_CHECKS', cast=str)
-DATABASE_URL = config('DATABASE_URL', cast=str)
+DATABASE_URL = config('DATABASE_URL', default=None)
 
 if DATABASE_URL is not None:
     import dj_database_url
