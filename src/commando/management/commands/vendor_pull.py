@@ -9,9 +9,14 @@ STATICFILES_VENDOR_DIR = getattr(settings,'STATICFILES_VENDOR_DIR')
 
 VENDOR_STATICFILES = {
     
-    "flowbite.min.css": "https://cdnjs.cloudflare.com/ajax/libs/flowbite/3.1.2/flowbite.min.css",
-    "flowbite.min.js": "https://cdnjs.cloudflare.com/ajax/libs/flowbite/3.1.2/flowbite.min.js",
-    "tailwind.min.css": "https://cdn.tailwindcss.com/3.4.17",
+    # "flowbite.min.css": "https://cdnjs.cloudflare.com/ajax/libs/flowbite/3.1.2/flowbite.min.css",
+    # "flowbite.min.js": "https://cdnjs.cloudflare.com/ajax/libs/flowbite/3.1.2/flowbite.min.js",
+    # "tailwind.min.css": "https://cdn.tailwindcss.com/3.4.17",
+    
+    "flowbite.min.css": "https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css",
+    "flowbite.min.js": "https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js",
+    "flowbite.min.js.map": "https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js.map"
+    # "tailwind.min.css": "https://cdn.tailwindcss.com",
     
 }
 
